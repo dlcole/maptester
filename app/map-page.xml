@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+  xmlns:lm="@kefah/nativescript-google-maps" 
+  navigatingTo="onNavigatingTo" class="page">
+  <Page.actionBar>
+    <ActionBar title="Map Tester" class="action-bar">
+      <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="onBackTap"/>
+    </ActionBar>
+  </Page.actionBar>
+  <GridLayout >
+    <lm:GoogleMaps latitude="35.913623" longitude="-79.055524" zoom="10" mapReady="onMapReady" />
+  </GridLayout>
+</Page>
+

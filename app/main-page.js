@@ -38,3 +38,17 @@ to the file’s corresponding XML file. In this case, exporting the onNavigating
 function here makes the navigatingTo="onNavigatingTo" binding in this page’s XML
 file work.
 */
+
+export function onMapTap(args) {
+  let page = args.object.page;
+
+  console.log("onMapTap...");
+
+  let navigationOptions = {
+    moduleName: "map-page",
+    context: { bindingContext: {} }
+  }
+
+  page.frame.navigate(navigationOptions);
+
+}
